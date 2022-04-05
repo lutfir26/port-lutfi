@@ -1,32 +1,6 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["login"])) {
-  header("location: login.php");
-}
-
-require 'functions.php';
-// query data
-// laptop
-
-// $jumlahDataPerhalaman = 3;
-// $jumlahData = count(query("SELECT * FROM laptop"));
-// $jumlahHalaman = ceil($jumlahData / $jumlahDataPerhalaman);
-// $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
-// var_dump($halamanAktif);
-
-
-$laptop = query("SELECT * FROM laptop");
-
-
-
-// Portfolio
-$portfolio = query("SELECT * FROM portfolio");
-?>
-
 <!DOCTYPE html>
 <html lang="en" id="home">
-<?php include "head.php" ?>
+<?php include "head.html" ?>
 
 <body>
 
@@ -97,15 +71,6 @@ $portfolio = query("SELECT * FROM portfolio");
           <hr>
         </div>
       </div>
-      <div class="row">
-        <?php foreach ($portfolio as $gam) : ?>
-          <div class="col-sm-4">
-            <a href="" class="thumbnail">
-              <img src="img/portofolio/<?= $gam["gambar"]; ?>">
-            </a>
-          </div>
-        <?php endforeach; ?>
-      </div>
     </div>
   </section>
   <!-- Akhir Portofolio -->
@@ -120,22 +85,6 @@ $portfolio = query("SELECT * FROM portfolio");
         </div>
       </div>
 
-      <div class="row">
-        <?php foreach ($laptop as $row) : ?>
-          <div class="col-sm-4" id="jualan" style="padding-top: 10px;">
-            <a href="ubah.php?id=<?= $row["id"]; ?>" class="thumbnail" id="jualan" style="margin: 5px;">
-              <h4 class="text-center"><?= $row["nama"]; ?></h4>
-              <img src="img/<?= $row["gambar"]; ?>">
-              <ul>
-                <!-- <li style='list-style-type: none;'>Nama : </li> -->
-                <li style='list-style-type: none;'>Processor : <?= $row["processor"]; ?></li>
-                <li style='list-style-type: none;'>Dimensi : <?= $row["dimensi"]; ?></li>
-                <li style='list-style-type: none;'>Resolusi : <?= $row["resolusi"]; ?></li>
-              </ul>
-            </a>
-          </div>
-        <?php endforeach; ?>
-      </div>
       <div class="row" style="padding-bottom: 15px; padding-top:10px;">
         <div class="col-sm-12 text-center">
           <a href="tambah.php" class="btn btn-success">Titip Dodolan</a>
@@ -181,7 +130,7 @@ $portfolio = query("SELECT * FROM portfolio");
   </section>
   <!-- akhir Contact -->
 
-  <?php include "footer.php" ?>
+  <?php include "footer.html" ?>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.min.js"></script>
