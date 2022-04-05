@@ -1,0 +1,88 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-top: 30px;
+    padding-bottom: 0px;
+}
+
+.jumbotron {
+    width: 100%;
+    background-image: url('../img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -250px;
+    /* color: black;
+    text-shadow: 0.2px solid white; */
+
+}
+
+.jumbotron a img {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #666;
+    transition: 0.3s;
+
+}
+
+.jumbotron a :hover {
+    width: 200px;
+    height: 200px;
+    border: 4px solid lightblue;
+}
+
+.jumbotron p a {
+    text-decoration: none;
+    color: #333333;
+}
+
+hr {
+    width: 250px;
+    border: 1px solid #666;
+}
+
+/* section {
+    min-height: 350px;
+} */
+
+.portofolio {
+    background-color: rgb(212, 211, 211);
+}
+
+.market ul li,
+.col-sm-4 #jualan{
+    color: black;
+    list-style-type: none;
+    /* min-height: 240px; */
+
+}
+
+.contact {
+    /* min-height: 500px; */
+    background-color: rgb(212, 211, 211);
+    /* padding-bottom: 30px; */
+}
+
+.contact form button {
+    /* background-color: rgb(15, 120, 206);
+    color: white; */
+    transition: 0.3s;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #666;
+    /* background-color: aqua; */
+    /* bottom: 0px; */
+    padding-bottom: 0px;
+}
+
+footer p {
+    color: white;
+    font-size: 15px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
