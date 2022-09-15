@@ -3,8 +3,4 @@
 deployment:
 tasks:
   - export DEPLOYPATH=/home/phiproje/public_html/portfolio/
-  - /bin/cp index.html $DEPLOYPATH
-  - /bin/cp -R img $DEPLOYPATH
-  - /bin/cp -R css $DEPLOYPATH
-  - /bin/cp -R font $DEPLOYPATH
-  - /bin/cp -R js $DEPLOYPATH
+  - /bin/cp -R * $DEPLOYPATH
