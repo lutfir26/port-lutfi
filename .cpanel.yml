@@ -1,5 +1,4 @@
 ---
-
 deployment:
 tasks:
   - export DEPLOYPATH=/home/phiproje/public_html/portfolio/
